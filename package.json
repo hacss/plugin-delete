@@ -1,0 +1,34 @@
+{
+  "name": "@hacss/plugin-delete",
+  "version": "1.0.0",
+  "description": "Deletes declarations by property name.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hacss/plugin-delete.git"
+  },
+  "keywords": [
+    "hacss",
+    "plugin",
+    "delete",
+    "properties",
+    "declarations",
+    "css",
+    "atomic",
+    "inline",
+    "styles"
+  ],
+  "author": "Nick Saunders",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hacss/plugin-delete/issues"
+  },
+  "homepage": "https://hacss.io/",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.2"
+  }
+}
