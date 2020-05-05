@@ -54,5 +54,8 @@
       "eslint --cache --fix",
       "npm test"
     ]
+  },
+  "peerDependencies": {
+    "@hacss/core": "^1.0.0"
   }
 }
