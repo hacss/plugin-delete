@@ -1,26 +1,26 @@
-const { expect } = require("chai");
-const deletePlugin = require("../index.js");
+const assert = require("assert");
+const deletePlugin = require("../dist/hacss-plugin-delete.umd.js");
 
-describe("delete plugin", () => {
-  const keepDecls = {
-    "padding-x": "10px",
-  };
+const keepDecls = {
+  "padding-x": "10px",
+};
 
-  const input = {
-    "margin-x": "20px",
-    "margin-y": "30px",
-    ...keepDecls,
-  };
+const input = {
+  "margin-x": "20px",
+  "margin-y": "30px",
+  ...keepDecls,
+};
 
-  const spec = ["margin-x", "margin-y"];
+const spec = ["margin-x", "margin-y"];
 
-  const [ del, properties ] = deletePlugin(spec);
+const [del, properties] = deletePlugin(spec);
 
-  it("deletes specified properties", () => {
-    expect(del(input)).to.deep.equal(keepDecls);
-  });
+const test = (actual, expected) => {
+  console.log(`${JSON.stringify(actual)} === ${JSON.stringify(expected)}`);
+  assert.deepEqual(actual, expected);
+};
 
-  it("adds the keys from the spec to the list of recognized properties", () => {
-    expect(properties).to.deep.equal(spec);
-  });
-});
+test(del(input), keepDecls);
+test(properties, spec);
+
+console.log("All tests passed.");
