@@ -1,6 +1,6 @@
 {
   "name": "@hacss/plugin-delete",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Deletes declarations by property name.",
   "main": "dist/hacss-plugin-delete.umd.js",
   "scripts": {
